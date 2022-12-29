@@ -42,7 +42,7 @@ cls
 mkdir C:\Optimizer
 start /b net start STR >nul 2>&1
 	if not exist SetTimerResolutionService.exe (
-		curl -g -L -# -o "C:\Optimizer\SetTimerResolutionService.exe" "https://github.com/auraside/HoneCtrl/raw/main/Files/SetTimerResolutionService.exe" >nul 2>&1
+		curl -g -L -# -o "C:\Optimizer\SetTimerResolutionService.exe" "https://github.com/bladeskilled/Minecraft-Optimizer/raw/main/Optimizer/SetTimerResolutionService.exe" >nul 2>&1
 		%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe /i SetTimerResolutionService.exe >nul 2>&1
 	)
 		sc config "STR" start=auto >nul 2>&1
