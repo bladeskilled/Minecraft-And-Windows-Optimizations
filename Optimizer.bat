@@ -63,4 +63,7 @@ REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelem
 
 powercfg -s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
+Reg add "HKCU\Software\Microsoft\GameBar" /v "AllowAutoGameMode" /t Reg_DWORD /d "1" /f
+Reg add "HKCU\Software\Microsoft\GameBar" /v "AutoGameModeEnabled" /t Reg_DWORD /d "1" /f
+
 ping 127.0.0.1 -n 5 >nul
