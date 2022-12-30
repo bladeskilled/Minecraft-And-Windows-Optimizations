@@ -30,8 +30,6 @@ cls
 title Stage 1
 wmic process where name="svchost.exe" CALL setpriority "idle"
 cls
-ping 127.0.0.1 -n 5 >nul
-cls
 wmic process where name="javaw.exe" CALL setpriority "realtime priority"
 wmic process where name="javaw.exe" CALL setpriority "realtime priority"
 cls
@@ -64,3 +62,5 @@ start /b net start STR >nul 2>&1
 REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
 
 powercfg -s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+
+ping 127.0.0.1 -n 5 >nul
