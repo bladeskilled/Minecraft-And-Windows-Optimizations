@@ -30,8 +30,11 @@ cls
 title Stage 1
 wmic process where name="svchost.exe" CALL setpriority "idle"
 cls
+wmic process where ProcessId=%pid% CALL setpriority "realtime priority"
 wmic process where name="javaw.exe" CALL setpriority "realtime priority"
 wmic process where name="javaw.exe" CALL setpriority "realtime priority"
+wmic process where name="mqsvc.exe" CALL setpriority "high priority"
+wmic process where name="mqtgsvc.exe" CALL setpriority "high priority"
 cls
 echo This will change your IP address only if you have a dynamic IP address, nothing else will be changed.
 timeout 1 /nobreak > nul
